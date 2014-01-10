@@ -1,4 +1,5 @@
 import java.lang.Math;
+import java.util.ArrayList;
 
 public class Coordinate {
     private double myX;
@@ -17,9 +18,8 @@ public class Coordinate {
     public double getX(){ return myX; }
     public double getY(){ return myY; }
 
-    public String toString(){
-        return "(" + myX + ", " + myY + ")";
-    }
+    public String toString()
+    { return "(" + myX + ", " + myY + ")"; }
 
     public boolean equals(Coordinate rhs){
         double EPS = 0.001
@@ -39,10 +39,10 @@ public class Coordinate {
     }
 
     public void sort(ArrayList <Coordinate> list){
-        int i,j,min;
-        for (j=0; j<n-1; j++) {
+        int min;
+        for (int j = 0; j < n-1; j++) {
             min = j;
-            for (i=j+1; i<n; i++) {
+            for (int i = j+1; i < n; i++) {
                 if (list.get(i).compareTo(list.get(min)) < 0)
                     min = i;
             }
@@ -62,8 +62,5 @@ public class Coordinate {
                 found++;
             }
         }
-    }
-    main() {
-        /* to do */
     }
 }
